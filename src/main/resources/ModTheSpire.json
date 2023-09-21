@@ -1,0 +1,10 @@
+{
+  "modid": "ScriptTheSpire",
+  "name": "Script The Spire",
+  "author_list": ["REME"],
+  "description": "添加了使用lua脚本修改游戏内容，或是添加自定义触发器的能力。",
+  "version": "1.0.0",
+  "sts_version": "12-22-2020",
+  "mts_version": "3.23.2",
+  "dependencies": ["basemod"]
+}
