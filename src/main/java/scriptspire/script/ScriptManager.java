@@ -17,10 +17,10 @@ import org.luaj.vm2.lib.PackageLib;
 import org.luaj.vm2.lib.StringLib;
 import org.luaj.vm2.lib.TableLib;
 import org.luaj.vm2.lib.jse.*;
+import scriptspire.event.ExecuteScriptEvent;
 import scriptspire.modcore.ScriptTheSpire;
 import scriptspire.modcore.Utils;
 import scriptspire.script.effect.DevCommandEffect;
-import scriptspire.script.proxy.AddCommand;
 import scriptspire.script.proxy.AddListener;
 
 import java.io.File;
@@ -191,8 +191,12 @@ public class ScriptManager {
         userEnv.load(new ScriptProxy());
         userEnv.load(new StsProxy());
 //        userEnv.set("addCard", new AddCard());
-        userEnv.set("addCommand", new AddCommand());
+//        userEnv.set("addCommand", new AddCommand());
         userEnv.set("addListener", new AddListener());
+
+        ExecuteScriptEvent event = new ExecuteScriptEvent();
+        event.userEnv = userEnv;
+        ScriptTheSpire.EVENT.publish(ExecuteScriptEvent.class, event);
 
 //        if (Loader.isModLoaded("loadout")) {
 //            LoadoutUtils.install(userEnv);

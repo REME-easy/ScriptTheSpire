@@ -15,6 +15,7 @@ public class EventManager {
     private final HashMap<Class<?>, IEventHandler> handlers = new HashMap<>();
 
     public void initialize() {
+        addEventHandler(ExecuteScriptEvent.class);
         addBuiltInInterfaces();
         addBaseModInterfaces();
 //        subscribe(StartGameEvent.class, e -> Utils.log("game start"));
