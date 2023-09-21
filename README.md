@@ -20,6 +20,7 @@ Example scripts will be generated at first run. You can delete them as you like.
 
 Check the wiki for tutorials.
 
-Dependencies:
+
+## Dependencies:
 [luaj](https://github.com/luaj/luaj)
 [commons-io](https://commons.apache.org/proper/commons-io/)
