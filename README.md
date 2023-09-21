@@ -19,3 +19,7 @@ This mod supports hot-reload, any change to the file will be immediately applied
 Example scripts will be generated at first run. You can delete them as you like.
 
 Check the wiki for tutorials.
+
+Dependencies:
+[luaj](https://github.com/luaj/luaj)
+[commons-io](https://commons.apache.org/proper/commons-io/)
